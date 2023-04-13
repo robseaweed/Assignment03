@@ -1,0 +1,506 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+.bg-grey {
+  background: #f7f7f7;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  color: #504f4f;
+}
+section .container {
+  width: 75rem;
+  margin: auto;
+}
+
+/* BANNER */
+#banner img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  filter: brightness(50%);
+}
+.text-banner {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.text-banner h1 {
+  font-size: 3rem;
+}
+.text-banner small {
+  color: #bdc3c7;
+}
+
+/* NAV */
+nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar {
+  position: absolute;
+  width: 15rem;
+  top: -5rem;
+  left: 40%;
+  border: 10px solid #fff;
+  border-radius: 50%;
+}
+#nav-bar a:link,
+a:visited {
+  color: #1d3557;
+  text-transform: capitalize;
+  padding: 2rem 3rem;
+}
+.a-l {
+  border-left: 2px solid #dfe6e9;
+}
+.a-r {
+  border-right: 2px solid #dfe6e9;
+}
+.text-nav {
+  display: inline-block;
+  margin: 0 6rem;
+}
+.text-nav h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.text-nav span {
+  color: #8d9194;
+}
+
+/* INFO */
+/* Sử dụng Grid Layout ở Grid container "#about .container" để chia bố cục thành 2 cột */
+#about .container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  width: auto;
+  justify-content: center;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+#about p,
+#about li {
+  color: #8d9194;
+}
+#about b,
+#about span {
+  color: #504f4f;
+}
+#about h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+#target {
+  padding: 4rem 5rem;
+}
+#personal-info {
+  padding: 4rem 5rem 3rem 5rem;
+  background-color: #8d919422;
+}
+#about ul {
+  padding: 0;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+.icon-ab {
+  font-size: 1.5rem;
+}
+
+/* JOB INFO */
+/* Sử dụng Grid Layout ở Grid container "#job-info .container" để chia bố cục thành 3 cột và 2 hàng */
+#job-info .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 45rem 33rem;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  margin-bottom: 3rem;
+}
+/* Tại mỗi Grid items thuộc "#job-info .container" lại chia thành bố cục 2 cột và 2 hàng */
+.col {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 8rem auto;
+  border: 1px solid #dfe6e9;
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.07);
+  padding: 2rem 2rem 0 2rem;
+  margin-top: 1rem;
+}
+.col h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  align-self: center;
+}
+.icon-info {
+  stroke: #8d9194;
+  width: 4rem;
+  height: 4rem;
+  justify-self: center;
+  align-self: center;
+}
+/* Sử dụng thuộc tính grid-column và grid-row để Grid items chiếm toàn bộ Grid area được chọn */
+dl {
+  grid-column: 1/-1;
+  grid-row: 2/-1;
+}
+#job-info span {
+  font-size: 0.9rem;
+  color: #8d919499;
+  font-weight: lighter;
+}
+dd {
+  color: #8d9194;
+}
+
+/* Hobby */
+/* Biến Grid item ".hobby" thành Grid container bằng Grid Layout để chia bố cục thành 4 cột và 2 hàng, dùng để căn chỉnh "sở thích" và icon tượng trưng */
+.hobby {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 3.5rem);
+  grid-column: 1/-1;
+  grid-row: 2/-1;
+}
+.icon-hobby {
+  width: 1.5rem;
+  height: 1.5rem;
+  box-sizing: content-box;
+  padding: 0.8rem;
+  border: 2px solid #0abbe3;
+  border-radius: 50%;
+  justify-self: center;
+}
+.hobby p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  justify-self: center;
+}
+
+/* Language & Skill */
+.lang p,
+.skill p {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.line-1 {
+  background-color: #0abde3;
+  display: inline-block;
+  height: 0.2rem;
+  margin: 1rem 0.3rem 2rem 0;
+  width: 3rem;
+}
+.line-2 {
+  background: #8d9194;
+  display: inline-block;
+  height: 0.2rem;
+  margin: 1rem 0.3rem 2rem 0;
+  width: 3rem;
+}
+
+/* CERT */
+/* Sử dụng Grid Layout ở Grid container ".cert" để chia bố cục thành 2 cột và 2 hàng */
+.cert {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 9rem);
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+/* Tại mỗi Grid items thuộc Grid container trên lại chia thành bố cục 2 cột */
+.web {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  font-size: 1rem;
+  border-bottom: 1px solid #d6c08d;
+  margin-bottom: 1rem;
+}
+.cert img {
+  height: 6.5rem;
+}
+.cert ul {
+  font-size: 1rem;
+  list-style: none;
+  padding: 0;
+}
+#certificate h1 {
+  padding: 2rem 0;
+}
+
+/* PROJECT */
+#project h1 {
+  padding: 2rem 0;
+}
+/* Sử dụng Grid Layout để chia bố cục thành 3 cột */
+.grid-3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  column-gap: 3rem;
+  margin-bottom: 2rem;
+}
+/* Biến Grid item ".project" thành Grid container bằng Grid Layout để chia bố cục thành 4 hàng, dùng để căn chỉnh các mục chính của dự án */
+.project {
+  display: grid;
+  grid-template-rows: 15.3rem 3rem 3rem 22rem;
+  border: 1px solid #dfe6e9;
+  text-decoration: none;
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.07);
+}
+#project a:link,
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+#project a:hover,
+a:active {
+  text-decoration: none;
+  color: #000;
+}
+.project img {
+  width: 100%;
+  border: 1px solid #dfe6e9;
+}
+.proj-name {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #dfe6e9;
+}
+.proj-ab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #dfe6e9;
+}
+.time {
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+}
+/* Biến Grid item ".proj-tb" thành Grid container bằng Grid Layout để chia bố cục thành 2 cột và 3 hàng, dùng để căn chỉnh các phần tử thuộc thành phần bảng của dự án */
+.proj-tb {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: repeat(3, 1fr);
+  border: 1px solid #dfe6e9;
+}
+.proj-ab p {
+  display: inline-block;
+  margin: 0;
+}
+.proj-tb p {
+  display: flex;
+  padding: 1rem;
+  margin: 0;
+  border-bottom: 2px solid #dfe6e9;
+}
+
+/* FOOTER */
+/* Sử dụng Grid Layout ở Grid container ".footer ul" để chia bố cục thành 6 cột */
+#footer ul {
+  display: grid;
+  grid-template-columns: repeat(6, 5rem);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  margin: 0;
+}
+#footer li {
+  display: inline-block;
+  font-size: 1rem;
+}
+#footer i {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2.5rem;
+}
+
+/* Hiên thị cho màn hình thu nhỏ desktop 1 */
+@media screen and (max-width: 1200px) {
+  /* Navbar */
+  .avatar {
+    left: 39%;
+  }
+
+  /* About */
+  #about h1 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  #target {
+    padding: 4rem 2rem;
+  }
+  #personal-info {
+    padding: 4rem 1rem 3rem 3rem;
+  }
+
+  /* Info */
+  #job-info .container {
+    grid-template-rows: 48rem 32rem;
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
+  .col {
+    grid-template-rows: 4rem auto;
+    row-gap: 2rem;
+  }
+  .col h1 {
+    font-size: 2rem;
+  }
+  .icon-info {
+    width: 3rem;
+    height: 3rem;
+  }
+  .icon-hobby {
+    width: 1rem;
+    height: 1rem;
+  }
+  .hobby p {
+    font-size: 0.9rem;
+  }
+  .lang p,
+  .skill p {
+    font-size: 0.9rem;
+  }
+
+  /* Certificate */
+  #certificate h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .web {
+    padding: 1rem;
+  }
+  .cert img {
+    height: 5rem;
+  }
+  .cert ul {
+    font-size: 0.9rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  /* Project */
+  #project h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .grid-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    font-size: 1rem;
+  }
+  .project {
+    grid-template-columns: 1fr;
+    grid-template-rows: 12.4rem 3rem 5rem 25rem;
+  }
+  .time {
+    grid-row: 1/-1;
+  }
+  .pj-if-1 {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+  }
+  .pj-if-2 {
+    grid-column: 2/-1;
+    grid-row: 2/-1;
+  }
+}
+
+/* Hiên thị cho màn hình thu nhỏ desktop 2 */
+@media screen and (max-width: 990px) {
+  /* Banner */
+  .text-banner {
+    top: 15%;
+  }
+  .text-banner h1 {
+    font-size: 2rem;
+  }
+
+  /* Navbar */
+  .avatar {
+    width: 12rem;
+    top: -4rem;
+    left: 37%;
+  }
+  #nav-bar a:link,
+  a:visited {
+    padding: 1rem 1rem;
+  }
+
+  /* About */
+  #personal-info {
+    padding: 4rem 1rem 2rem 3rem;
+  }
+  #about h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Info */
+  #job-info h1 {
+    font-size: 1.5rem;
+  }
+  #job-info .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40rem 24rem 30rem;
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
+  .hobby p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    justify-self: center;
+  }
+
+  /* Certificate */
+  #certificate h1 {
+    font-size: 1.5rem;
+  }
+  .cert {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .web {
+    grid-template-columns: 1fr;
+    grid-template-rows: 70% 30%;
+  }
+  .cert img {
+    height: 10rem;
+  }
+  .cert b {
+    font-size: 0.9rem;
+  }
+  .cert ul {
+    font-size: 1rem;
+  }
+
+  /* Project */
+  #project h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .grid-3-cols {
+    grid-template-columns: repeat(3, 15rem);
+    column-gap: 1rem;
+    font-size: 0.8rem;
+  }
+  .project {
+    grid-template-columns: 15rem;
+    grid-template-rows: 10.3rem 2rem 5rem 21rem;
+  }
+  .proj-ab {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}

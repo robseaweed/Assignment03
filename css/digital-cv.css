@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  color: blue;
+  padding: 1rem 0 0;
+  margin: 0 1rem;
+}
+svg {
+  width: 2rem;
+  height: 2rem;
+  justify-self: center;
+}
+.container {
+  border-top: 1px solid #aaa;
+}
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  border: 8px solid blue;
+}
+
+/* Goals */
+.goals {
+  border: 8px solid blue;
+}
+.goals-list {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: repeat(3, 5rem);
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  margin: 1rem;
+}
+
+/* Team */
+.team {
+  border: 8px solid blue;
+}
+.team-list {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: repeat(4, 4rem);
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  margin: 1rem;
+}
+
+/* Timeline */
+.timeline {
+  grid-column: 3/4;
+  grid-row: 1/-1;
+  border: 8px solid blue;
+}
+.timeline-list {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: repeat(7, 5rem);
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  margin: 1rem;
+}
+.timeline-list svg {
+  color: purple;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* Scopes */
+.scopes {
+  border: 8px solid blue;
+}
+.in-out {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  margin: 1rem;
+  gap: 2rem;
+}
+
+/* Primary */
+.primary {
+  border: 8px solid blue;
+}
+.primary-list {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: repeat(2, 7rem);
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  margin: 1rem;
+}
+
+/* Hiển thị cho màn hình Tablet */
+@media screen and (max-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    border: 8px solid blue;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .goals-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 3rem);
+    row-gap: 2rem;
+    align-items: flex-end;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    margin: 1rem;
+  }
+  .goal-1,
+  .goal-2,
+  .goal-3 {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #aaa;
+  }
+
+  .team-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 3rem);
+    row-gap: 1rem;
+    align-items: flex-end;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    margin: 1rem;
+  }
+  .team-1,
+  .team-2,
+  .team-3,
+  .team-4 {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #fff;
+  }
+
+  .timeline-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(14, 3rem);
+    row-gap: 2rem;
+    align-items: flex-end;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    margin: 1rem;
+  }
+  .timeline-1,
+  .timeline-2,
+  .timeline-3,
+  .timeline-4,
+  .timeline-5,
+  .timeline-6,
+  .timeline-7 {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #aaa;
+  }
+  .timeline-list svg {
+    width: 3rem;
+    height: 3rem;
+    justify-self: flex-start;
+  }
+
+  .in-out {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    margin: 1rem;
+  }
+
+  .primary-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 2rem);
+    row-gap: 2rem;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    margin: 1rem;
+  }
+}
+
+/* Hiển thị cho màn hình Mobile */
+@media screen and (max-width: 414px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .goals-list {
+    row-gap: 3rem;
+    font-size: 1.2rem;
+  }
+
+  .team-list {
+    row-gap: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .timeline-list {
+    row-gap: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .in-out {
+    font-size: 1.2rem;
+  }
+
+  .primary-list {
+    grid-template-rows: repeat(4, 3rem);
+    row-gap: 1rem;
+    font-size: 1.2rem;
+  }
+}
