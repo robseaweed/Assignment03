@@ -1,7 +1,7 @@
 /* Hiên thị cho màn hình mobile */
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 480px) {
   section .container {
-    width: 375.2px;
+    width: 100%;
     margin: 0;
   }
   /* Banner */
@@ -26,6 +26,7 @@
   }
   #nav-bar a:link,
   a:visited {
+    font-size: 1.1rem;
     padding: 0.5rem 1rem;
     border: none;
   }
@@ -33,32 +34,42 @@
   /* About */
   #about .container {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
   }
   #about h1 {
     font-size: 1.5rem;
     padding-bottom: 2rem;
   }
+  #about p,
+  #about li {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
   #target {
-    padding: 4rem 1rem;
+    padding: 4rem 2rem 1rem;
   }
   #personal-info {
-    padding: 4rem 1rem;
+    padding: 4rem 2rem;
   }
 
   /* Info */
   #job-info .container {
-    grid-template-columns: 370px;
-    grid-template-rows: 43rem 31rem 27rem 22rem 23rem 33rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40rem 30rem 24rem 21rem 22rem 32rem;
     row-gap: 1rem;
   }
   .col {
-    grid-template-rows: 8rem auto;
+    grid-template-rows: 7rem auto;
     gap: 0;
   }
-  .col h1 {
+  #job-info h1 {
     font-size: 1.5rem;
     font-weight: 700;
+  }
+  #job-info dt,
+  #job-info dd,
+  #job-info span {
+    font-size: 1rem;
   }
   .icon-info {
     width: 4rem;
@@ -68,6 +79,11 @@
     gap: 1rem;
     text-align: center;
   }
+  .icon-hobby {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.8rem;
+  }
   .hobby p {
     font-size: 1rem;
     font-weight: 600;
@@ -75,8 +91,6 @@
   .lang p,
   .skill p {
     font-size: 1rem;
-    margin-bottom: 0;
-    font-weight: 600;
   }
   .line-1 {
     height: 0.3rem;
@@ -90,19 +104,32 @@
   /* Certificate */
   #certificate h1 {
     font-size: 1.5rem;
+    margin: 2rem 0;
+  }
+  #certificate b,
+  #certificate li {
+    font-size: 1rem;
   }
   .cert {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    margin: 0 0 2rem 1rem;
+    grid-template-rows: repeat(3, auto);
+    margin: 0 4rem;
   }
   .web {
+    grid-template-rows: 60% 40%;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
     border: none;
   }
+  .cert ul {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #d6c08d;
+  }
   .cert img {
-    height: 12rem;
-    padding-top: 1rem;
-    border-top: 1px solid #d6c08d;
+    width: 1fr;
+    height: 11rem;
   }
 
   /* Project */
@@ -110,18 +137,15 @@
     font-size: 1.5rem;
     font-weight: 700;
   }
-  #project .container {
-    width: 375.2px;
-  }
   .grid-3-cols {
     grid-template-columns: 1fr;
     row-gap: 2rem;
-    margin-left: 1rem;
+    margin: 1rem;
     font-size: 1rem;
   }
   .project {
     grid-template-columns: 1fr;
-    grid-template-rows: 14.3rem 3rem 10rem 22rem;
+    grid-template-rows: 17.4rem 3rem 10rem 22rem;
   }
   .proj-ab {
     display: flex;
@@ -136,9 +160,9 @@
     margin: 0;
   }
   #footer li {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   #footer i {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
